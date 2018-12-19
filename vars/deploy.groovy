@@ -6,6 +6,7 @@ def call()
   {
        dir('SpringMVCSecurityXML/target') 
        {
+         sh 'whoami'
          sh 'cp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps'
        }
   }
