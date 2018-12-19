@@ -1,4 +1,6 @@
-  def call(String gitURL)
+#!/usr/bin/env groovy
+
+def call(String gitURL)
   {
     stage('Pull')
     {
