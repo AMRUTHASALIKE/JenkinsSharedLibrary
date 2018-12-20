@@ -22,7 +22,7 @@ def call(String key_id)
        dir('SpringMVCSecurityXML/target') 
        {  
          sh "echo ${key_id}"
-         sshagent(['"${key_id}"']) 
+         sshagent(["${key_id}"]) 
          {
            //scp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps
            sh "echo ${key_id}"
