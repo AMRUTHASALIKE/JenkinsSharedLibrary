@@ -23,7 +23,7 @@ def call()
          sshagent(['rs1']) 
          {
            //scp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps
-           scp /home/ubuntu/f1 ubuntu@52.47.190.123:~
+           sh "scp /home/ubuntu/f1 ubuntu@52.47.190.123:~"
          }
 
        }
