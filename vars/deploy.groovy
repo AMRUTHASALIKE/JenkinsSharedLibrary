@@ -19,7 +19,8 @@ def call(String key_id)
   stage('Deploy')
   {
        dir('SpringMVCSecurityXML/target') 
-       {         
+       {  
+         sh "echo "${key_id}""
          sshagent(["${key_id}"]) 
          {
            //scp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps
