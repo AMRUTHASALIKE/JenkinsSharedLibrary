@@ -14,9 +14,9 @@ def call()
 }
 */
 
-def call(String key_id)
+def call(String key_id, String user, String ip)
 {
-  echo "${key_id}"
+  //echo "${key_id}"
   stage('Deploy')
   {
        dir('SpringMVCSecurityXML/target') 
@@ -26,7 +26,7 @@ def call(String key_id)
          {
            //scp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps
            sh "echo ${key_id}"
-           sh "scp /home/ubuntu/f1 ubuntu@52.47.190.123:~"
+           sh "scp /home/ubuntu/f1 ${user}@${ip}:~"
          }
 
        }
