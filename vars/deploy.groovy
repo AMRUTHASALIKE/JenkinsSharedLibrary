@@ -14,13 +14,13 @@ def call()
 }
 */
 
-def call()
+def call(String key_id)
 {
   stage('Deploy')
   {
        dir('SpringMVCSecurityXML/target') 
        {         
-         sshagent(['rs1']) 
+         sshagent(['${key_id}']) 
          {
            //scp SpringMVCSecurityXML.war /var/lib/tomcat8/webapps
            sh "scp /home/ubuntu/f1 ubuntu@52.47.190.123:~"
