@@ -9,3 +9,6 @@ def call(String name = 'amrutha') {
   echo env.deploy_user
   echo env['deploy_user']
   echo "${env.deploy_user}"
+ 
+  
+}
